@@ -91,6 +91,7 @@
         .stock-block { width: 16px; height: 16px; border: 1px solid #cbd5e1; background-color: #fff; border-radius: 2px; }
         .stock-block.active { background-color: #ef4444; border-color: #ef4444; }
 
+        /* Grid Hero para Desktop e Mobile (Reordenado) */
         .hero-grid {
             display: grid;
             grid-template-areas: 
@@ -122,6 +123,23 @@
             .mobile-center-all { text-align: center !important; align-items: center !important; }
             .mobile-video-box { width: 100%; max-width: 440px; margin: 0 auto; }
             .mobile-benefit-grid { grid-template-columns: 1fr !important; gap: 0.75rem !important; }
+        }
+
+        /* Política de Cookies Discreta mas com Botão Visível */
+        #cookie-notice {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            border-top: 1px solid #cbd5e1;
+            padding: 12px 20px;
+            z-index: 9999;
+            display: none;
+            box-shadow: 0 -4px 12px rgba(0,0,0,0.05);
+        }
+        @media (max-width: 640px) {
+            #cookie-notice { padding: 10px 16px; }
         }
     </style>
 </head>
@@ -217,7 +235,6 @@
                             <i class="fas fa-arrow-right text-xl"></i>
                         </button>
 
-                        <!-- GARANTIA DE 30 DIAS DESTACADA -->
                         <div class="flex items-center gap-2 mb-5 px-1">
                             <i class="fas fa-shield-halved text-brand-deep text-sm"></i>
                             <span class="text-[11px] lg:text-xs font-bold text-brand-deep uppercase tracking-wide" data-i18n="guarantee_badge">30-Day Money-Back Guarantee Included</span>
@@ -325,7 +342,7 @@
         <!-- FOOTER -->
         <footer class="bg-brand-footer pt-20 pb-12 px-6 mt-auto text-white">
             <div class="max-w-7xl mx-auto flex flex-col items-center text-center">
-                <img src="images/EMSense logo white.svg" alt="EMSense authorized logo" class="h-8 md:h-12 w-auto mb-12">
+                <img src="images/EMSense logo white.svg" alt="EMSense official logo" class="h-8 md:h-12 w-auto mb-12">
                 
                 <nav class="flex flex-wrap justify-center gap-x-10 gap-y-6 mb-16 text-[11px] uppercase font-black tracking-widest text-white/60">
                     <button onclick="openModal('privacy')" class="hover:text-white transition-all">Privacy Policy</button>
@@ -338,11 +355,8 @@
                 <!-- LEGAL COMPLIANCE -->
                 <div class="text-[10px] text-white/30 leading-relaxed max-w-5xl space-y-6 border-t border-white/5 pt-12">
                     <p>EMSense™ is owned and operated by <strong>FONSLIFE TRADING - FZCO</strong>. Registered Address: Dubai Silicon Oasis, DDP, Building A1, Dubai, UAE.</p>
-                    
                     <p class="italic" data-i18n="disclaimer_med"><strong>*Medical Disclaimer:</strong> The statements made on this website have not been evaluated by the Food and Drug Administration (FDA) or any other medical body. This product is not intended to diagnose, treat, cure, or prevent any disease. Results are based on clinical methods; experiences vary. Consult a professional before use if you have medical conditions.</p>
-                    
                     <p>This site is not a part of the Google website or Google Inc. Additionally, this site is NOT endorsed by Google in any way. Google is a trademark of Google, Inc.</p>
-                    
                     <div class="mt-10 pt-10 border-t border-white/5 flex flex-col items-center gap-2">
                         <p class="text-white/50 font-black tracking-[0.25em] uppercase text-[9px]" data-i18n="auth_distributor">Authorized EMSense™ Distributor</p>
                         <p class="opacity-30 text-[9px] tracking-widest">© 2026 EMSense Health. All rights reserved.</p>
@@ -363,7 +377,19 @@
         </div>
     </div>
 
-    <!-- TRANSLATION ENGINE -->
+    <!-- POLÍTICA DE COOKIES (DESTACADA) -->
+    <div id="cookie-notice">
+        <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+            <p class="text-[10px] lg:text-xs text-slate-600 font-medium leading-tight" data-i18n="cookie_text">
+                We use cookies to improve your experience. By continuing, you agree to our policies.
+            </p>
+            <button onclick="acceptCookies()" class="bg-brand-green text-white px-5 py-2 rounded-lg text-[11px] font-black uppercase tracking-wider hover:brightness-110 shadow-md transition-all shrink-0" data-i18n="cookie_accept">
+                Accept
+            </button>
+        </div>
+    </div>
+
+    <!-- TRANSLATION & LOGIC ENGINE -->
     <script>
         const translations = {
             'pt': {
@@ -411,7 +437,9 @@
                 'rev4': '"Pequeno, mas surpreendentemente potente."',
                 'rev5': '"Melhor investimento livre de drogas que fiz."',
                 'auth_distributor': 'Distribuidor Autorizado EMSense™',
-                'disclaimer_med': '<strong>*Aviso Médico:</strong> As declarações feitas neste site não foram avaliadas pela FDA ou qualquer outro órgão médico. Este produto não se destina a diagnosticar, tratar, curar ou prevenir qualquer doença. Resultados baseados em métodos clínicos; experiências variam. Consulte um profissional antes de usar.'
+                'disclaimer_med': '<strong>*Aviso Médico:</strong> As declarações feitas neste site não foram avaliadas pela FDA ou qualquer outro órgão médico. Este produto não se destina a diagnosticar, tratar, curar ou prevenir qualquer doença. Resultados baseados em métodos clínicos; experiências variam. Consulte um profissional antes de usar.',
+                'cookie_text': 'Utilizamos cookies para melhorar a sua experiência. Ao continuar, aceita as nossas políticas.',
+                'cookie_accept': 'Aceitar'
             }
         };
 
@@ -429,7 +457,17 @@
             }
         }
 
-        window.onload = applyTranslation;
+        function acceptCookies() {
+            document.getElementById('cookie-notice').style.display = 'none';
+            sessionStorage.setItem('cookies_accepted', 'true');
+        }
+
+        window.onload = function() {
+            applyTranslation();
+            if (!sessionStorage.getItem('cookies_accepted')) {
+                document.getElementById('cookie-notice').style.display = 'block';
+            }
+        };
 
         function scrollToSelector() { const el = document.getElementById('cta-options'); if(el) el.scrollIntoView({ behavior: 'smooth' }); }
         
