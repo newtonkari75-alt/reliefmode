@@ -26,7 +26,7 @@
     <meta property="og:description" content="Clinically used technology to reactivate nerves and restore circulation. Get 60% OFF today.">
     <meta property="og:image" content="images/faviconV2.jpg">
 
-    <!-- JSON-LD (DADOS ESTRUTURADOS PARA GOOGLE RICH SNIPPETS) -->
+    <!-- JSON-LD (DADOS ESTRUTURADOS) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org/",
@@ -91,9 +91,37 @@
         .stock-block { width: 14px; height: 14px; border: 1px solid #ddd; background-color: #fff; border-radius: 2px; }
         .stock-block.active { background-color: #ef4444; border-color: #ef4444; }
 
+        /* Mágica do Grid para manter Desktop lateral e Mobile ordenado */
+        .hero-grid {
+            display: grid;
+            grid-template-areas: 
+                "title"
+                "video"
+                "content";
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 1024px) {
+            .hero-grid {
+                grid-template-areas: 
+                    "title video"
+                    "content video";
+                grid-template-columns: 1fr 45%;
+                column-gap: 4rem;
+                align-items: start;
+            }
+            .grid-video {
+                align-self: center;
+            }
+        }
+
+        .grid-title { grid-area: title; }
+        .grid-video { grid-area: video; }
+        .grid-content { grid-area: content; }
+
         @media (max-width: 1024px) {
             .mobile-center-all { text-align: center !important; align-items: center !important; }
-            .mobile-video-box { margin-top: 1.25rem; margin-bottom: 1.25rem; width: 100%; max-width: 420px; }
+            .mobile-video-box { width: 100%; max-width: 420px; margin: 0 auto; }
             .mobile-benefit-grid { grid-template-columns: 1fr !important; gap: 0.5rem !important; }
         }
     </style>
@@ -125,12 +153,12 @@
 
         <main id="main-content">
             
-            <!-- SECTION 1: HERO (MOBILE OPTIMIZED: TITLE -> VIDEO -> DESC -> CTA) -->
-            <section class="bg-hero-light py-8 lg:py-16 animate-fade-in-up overflow-hidden">
-                <div class="max-w-7xl mx-auto px-5 lg:px-16 flex flex-col lg:flex-row items-center lg:items-start justify-between gap-2 lg:gap-16">
+            <!-- SECTION 1: HERO (CSS GRID OTIMIZADO) -->
+            <section class="bg-hero-light py-8 lg:py-16 animate-fade-in-up">
+                <div class="max-w-7xl mx-auto px-5 lg:px-16 hero-grid">
                     
-                    <!-- ORDER 1: TITLE BLOCK -->
-                    <div class="w-full lg:w-[50%] flex flex-col items-start text-left mobile-center-all order-1">
+                    <!-- BLOCO DE TÍTULO -->
+                    <div class="grid-title flex flex-col items-start text-left mobile-center-all">
                         <div class="flex items-center gap-1 mb-3 lg:mb-4">
                             <div class="flex text-yellow-400 text-[10px] lg:text-xs">
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -142,13 +170,13 @@
                             Help relieve muscle tension, soreness, and fatigue — <span class="text-brand-accent">starting today.*</span>
                         </h1>
                         
-                        <p class="text-brand-deep font-black text-[10px] lg:text-base tracking-[0.12em] lg:tracking-widest uppercase mb-4 opacity-90">
+                        <p class="text-brand-deep font-black text-[10px] lg:text-base tracking-[0.12em] lg:tracking-widest uppercase mb-2 lg:mb-4 opacity-90">
                             EMSense Massager Device™
                         </p>
                     </div>
 
-                    <!-- ORDER 2: VIDEO BLOCK -->
-                    <div class="w-full lg:w-[45%] flex flex-col items-center order-2 lg:order-last lg:mt-0 mobile-video-box">
+                    <!-- BLOCO DE VÍDEO -->
+                    <div class="grid-video flex flex-col items-center mobile-video-box">
                         <div class="video-container border-[3px] border-white">
                             <video autoplay muted loop playsinline poster="images/faviconV2.jpg">
                                 <source src="images/em-masssageador.mp4" type="video/mp4">
@@ -159,14 +187,14 @@
                         </p>
                     </div>
 
-                    <!-- ORDER 3: DESCRIPTION AND CTA -->
-                    <div class="w-full lg:w-[50%] flex flex-col items-start text-left mobile-center-all order-3 lg:-mt-12">
-                        <p class="text-[0.92rem] lg:text-[1.05rem] text-gray-700 leading-relaxed mb-6 max-w-lg lg:mt-4" data-i18n="hero_p">
+                    <!-- BLOCO DE CONTEÚDO (DESCRIÇÃO + BOTÃO) -->
+                    <div class="grid-content flex flex-col items-start text-left mobile-center-all">
+                        <p class="text-[0.92rem] lg:text-[1.05rem] text-gray-700 leading-relaxed mb-6 max-w-lg" data-i18n="hero_p">
                             Whether it’s from work, workouts, or everyday stress — tight muscles steal your energy and mobility. 
                             <strong>EMSense™</strong> delivers targeted EMS therapy that reaches deep beneath the skin to relax muscle fibers and boost circulation.*
                         </p>
 
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 mb-8 w-full max-w-md text-left mobile-benefit-grid">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5 mb-8 w-full max-w-md text-left mobile-benefit-grid">
                             <div class="flex items-center gap-2.5">
                                 <i class="fas fa-check-circle text-green-500 text-base" aria-hidden="true"></i>
                                 <span class="text-[13px] lg:text-sm font-bold text-gray-800" data-i18n="feat_1">19 Intensity Levels</span>
@@ -185,15 +213,17 @@
                             </div>
                         </div>
 
+                        <!-- CTA PRINCIPAL -->
                         <button onclick="scrollToSelector()" class="w-full max-w-[420px] bg-brand-green text-white py-4 lg:py-5 px-6 rounded-xl font-black text-base lg:text-lg shadow-xl flex items-center justify-between hover:scale-[1.02] transition-all uppercase mb-4" aria-label="Claim your 60 percent discount now">
                             <span data-i18n="btn_cta">GET 60% OFF TODAY!</span>
                             <i class="fas fa-arrow-circle-right text-xl"></i>
                         </button>
 
+                        <!-- STATUS DE ESTOQUE -->
                         <div class="w-full max-w-[420px] bg-white/60 border border-gray-200 rounded-xl py-2 px-4 flex items-center justify-between mb-2">
                             <span class="text-[9px] lg:text-[10px] font-bold text-gray-600 uppercase" data-i18n="stock_text">Live stock status:</span>
                             <div class="flex items-center gap-2">
-                                <div class="stock-bar">
+                                <div class="stock-bar" aria-label="Low stock indicator">
                                     <div class="stock-block active"></div><div class="stock-block"></div><div class="stock-block"></div><div class="stock-block"></div>
                                 </div>
                                 <span class="text-[9px] lg:text-[10px] font-black text-red-600 uppercase" data-i18n="stock_low">LOW</span>
@@ -201,6 +231,7 @@
                         </div>
                         <p class="text-[9px] text-gray-400 mb-8 italic lg:mb-6" data-i18n="hero_disclaimer">*Results based on individual conditions. See full disclaimer below.</p>
 
+                        <!-- SELOS DE SEGURANÇA -->
                         <div class="w-full max-w-[420px] flex flex-col items-center gap-4">
                             <div class="flex items-center gap-1.5 text-[8px] lg:text-[9px] text-gray-500 font-bold uppercase" data-i18n="secure_checkout">
                                 <i class="fas fa-lock text-orange-400"></i>
@@ -219,7 +250,7 @@
                 </div>
             </section>
 
-            <!-- SECTION 2: PURCHASE OPTIONS (TSL/DTC/EDITORIAL) -->
+            <!-- SECTION 2: CHOOSE YOUR PATH -->
             <section id="cta-options" class="py-20 bg-white border-t border-gray-100">
                 <div class="max-w-7xl mx-auto px-6 lg:px-8">
                     <header class="text-center mb-16">
@@ -227,7 +258,7 @@
                     </header>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                         
-                        <!-- OPTION 1 — DTC -->
+                        <!-- OPTION 1 — STORE -->
                         <div class="bg-gray-50 rounded-3xl shadow-lg border-2 border-brand-accent relative overflow-hidden flex flex-col h-full transform transition-all z-10 hover:-translate-y-1">
                             <div class="bg-brand-accent text-white text-center py-3 text-[10px] font-black uppercase tracking-widest" data-i18n="opt1_tag">✅ BEST PRICE (60% OFF DEAL)</div>
                             <div class="p-8 flex-1 flex flex-col">
@@ -247,7 +278,7 @@
                             </div>
                         </div>
 
-                        <!-- OPTION 2 — HOW IT WORKS (TSL) -->
+                        <!-- OPTION 2 — HOW IT WORKS -->
                         <div class="bg-white rounded-3xl shadow-md border border-gray-100 flex flex-col h-full hover:shadow-lg transition-all">
                             <div class="p-8 flex-1 flex flex-col">
                                 <h3 class="text-xl font-black text-brand-deep mb-1 uppercase tracking-tight leading-tight" data-i18n="opt2_title">HOW IT WORKS</h3>
@@ -266,7 +297,7 @@
                             </div>
                         </div>
 
-                        <!-- OPTION 3 — FEEDBACK (EDITORIAL) -->
+                        <!-- OPTION 3 — FEEDBACK -->
                         <div class="bg-white rounded-3xl shadow-md border border-gray-100 flex flex-col h-full hover:shadow-lg transition-all">
                             <div class="p-8 flex-1 flex flex-col text-left">
                                 <h3 class="text-xl font-black text-brand-deep mb-1 uppercase tracking-tight leading-tight text-left" data-i18n="opt3_title">CUSTOMER FEEDBACK</h3>
@@ -289,7 +320,7 @@
             </section>
         </main>
 
-        <!-- FOOTER (GOOGLE ADS COMPLIANCE & AUTHORIZED DISTRIBUTOR) -->
+        <!-- FOOTER -->
         <footer class="bg-brand-footer pt-16 pb-12 px-6 mt-auto text-white">
             <div class="max-w-7xl mx-auto flex flex-col items-center text-center">
                 <img src="images/EMSense logo white.svg" alt="EMSense Official Global Retailer" class="h-8 md:h-10 w-auto mb-10">
@@ -311,7 +342,7 @@
                     <p>This site is not a part of the Google website or Google Inc. Additionally, this site is NOT endorsed by Google in any way. Google is a trademark of Google, Inc.</p>
                     
                     <div class="mt-8 pt-8 border-t border-white/5 flex flex-col items-center gap-1">
-                        <!-- DISTRIBUIDOR AUTORIZADO - REFORÇO DE AUTORIDADE -->
+                        <!-- DISTRIBUIDOR AUTORIZADO - SEM MENSÃO DE AFILIADO -->
                         <p class="text-white/60 font-black tracking-[0.2em] uppercase" data-i18n="auth_distributor">Authorized EMSense™ Distributor</p>
                         <p class="opacity-40 tracking-wider">© 2026 EMSense Health. All rights reserved.</p>
                     </div>
@@ -331,7 +362,7 @@
         </div>
     </div>
 
-    <!-- SCRIPT DE TRADUÇÃO AUTOMÁTICA SEGURA (LOCAL) -->
+    <!-- SCRIPT DE TRADUÇÃO AUTOMÁTICA SEGURA -->
     <script>
         const translations = {
             'pt': {
