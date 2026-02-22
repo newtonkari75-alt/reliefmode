@@ -15,13 +15,6 @@
     <!-- CANONICAL URL -->
     <link rel="canonical" href="https://emsense-official.vercel.app/">
     
-    <!-- OPEN GRAPH / ADS TRUST -->
-    <meta property="og:type" content="product">
-    <meta property="og:url" content="https://emsense-official.vercel.app/">
-    <meta property="og:title" content="EMSense Massager Device™ | Fast Drug-Free Relief (60% OFF)">
-    <meta property="og:description" content="Stop letting tight muscles steal your energy. Get deep tissue relief anywhere.">
-    <meta property="og:image" content="images/emsense-product.png">
-
     <!-- ASSETS -->
     <link rel="icon" type="image/png" href="images/favconn.png">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -31,33 +24,29 @@
     <style>
         :root {
             --brand-deep: #00264C;
+            --brand-green: #28A745;
+            --bg-light-cyan: #F0F9FA; /* Cor de fundo do modelo */
         }
         body { font-family: 'Inter', sans-serif; top: 0 !important; }
         .text-brand-accent { color: var(--brand-deep); }
         .bg-brand-accent { background-color: var(--brand-deep); }
-        .border-brand-accent { border-color: var(--brand-deep); }
-        .hover-bg-brand-accent:hover { background-color: #001a35; transition: background-color 0.3s ease; }
-        .bg-brand-ice { background-color: #F8FAFC; }
+        .bg-brand-green { background-color: var(--brand-green); }
+        .bg-hero-light { background-color: var(--bg-light-cyan); }
         .bg-brand-footer { background-color: #001a35; }
+        
         html { scroll-behavior: smooth; }
         
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         .animate-fade-in-up { animation: fadeInUp 0.4s ease-out forwards; }
         
-        .pulse-accent { animation: pulse 2s infinite; }
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(0, 38, 76, 0.7); }
-            70% { box-shadow: 0 0 0 10px rgba(0, 38, 76, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(0, 38, 76, 0); }
-        }
-
+        /* Container do vídeo com proporção 1:1 */
         .video-container {
             position: relative;
             width: 100%;
-            padding-bottom: 100%; /* Proporção 1:1 */
+            padding-bottom: 100%; 
             height: 0;
             overflow: hidden;
-            border-radius: 2rem;
+            border-radius: 1.5rem;
         }
         .video-container video {
             position: absolute;
@@ -67,37 +56,31 @@
             height: 100%;
             object-fit: cover;
         }
+
+        /* Barra de Stock */
+        .stock-bar {
+            display: flex;
+            gap: 4px;
+            margin-top: 4px;
+        }
+        .stock-block {
+            width: 16px;
+            height: 16px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+        }
+        .stock-block.active {
+            background-color: #ef4444;
+            border-color: #ef4444;
+        }
     </style>
 </head>
-<body class="bg-brand-ice text-gray-900 antialiased">
+<body class="bg-white text-gray-900 antialiased">
 
-    <div class="w-full lg:max-w-7xl mx-auto bg-white min-h-screen lg:min-h-0 lg:rounded-2xl lg:shadow-2xl lg:my-8 flex flex-col relative transition-all overflow-hidden">
+    <div class="w-full lg:max-w-7xl mx-auto min-h-screen lg:min-h-0 lg:rounded-2xl lg:shadow-2xl lg:my-8 flex flex-col relative transition-all overflow-hidden">
         
-        <!-- CABEÇALHO -->
+        <!-- CABEÇALHO (Logo Branco sobre Azul Profundo) -->
         <header id="top-nav" class="flex flex-col">
-            <!-- BARRA DE BENEFÍCIOS -->
-            <div class="bg-brand-ice py-2 px-2 border-b border-gray-200 w-full relative">
-                <div class="flex justify-center items-center gap-4 md:gap-8">
-                    <div class="flex items-center gap-1.5">
-                        <i class="fas fa-truck text-[10px] text-brand-accent"></i>
-                        <span class="text-[9px] sm:text-xs font-bold text-brand-accent uppercase tracking-tight">FREE U.S. SHIPPING</span>
-                    </div>
-                    <div class="w-px h-3 bg-gray-300"></div>
-                    <div class="flex items-center gap-1.5">
-                        <i class="fas fa-check-circle text-[10px] text-brand-accent"></i>
-                        <span class="text-[9px] sm:text-xs font-bold text-brand-accent uppercase tracking-tight">100% DRUG-FREE RELIEF</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- AVISO DE DESCONTO -->
-            <div class="bg-brand-accent text-white text-center py-2 px-2 w-full">
-                <span class="text-[10px] sm:text-xs font-black uppercase tracking-wide">
-                    FLASH SALE: GET 60% OFF UNTIL MIDNIGHT
-                </span>
-            </div>
-
-            <!-- LOGOTIPO -->
             <div class="pt-4 pb-4 px-5 bg-brand-accent flex justify-center border-b border-white/10">
                 <img src="images/EMSense logo white.svg" alt="EMSense Logo" class="h-8 md:h-10 w-auto">
             </div>
@@ -105,130 +88,140 @@
 
         <main id="main-content">
             
-            <!-- PRIMEIRA SESSÃO: HERO SPLIT LAYOUT -->
-            <section class="px-6 py-12 lg:px-16 lg:py-24 animate-fade-in-up">
-                <div class="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
+            <!-- SESSÃO 1: HERO (Alinhamento restaurado com Copy Original) -->
+            <section class="bg-hero-light px-6 py-10 lg:px-16 lg:py-16 animate-fade-in-up">
+                <div class="flex flex-col lg:flex-row items-start justify-between gap-12 lg:gap-20">
                     
-                    <!-- LADO ESQUERDO: CONTEÚDO TEXTUAL -->
-                    <div class="w-full lg:w-1/2 text-center lg:text-left flex flex-col items-center lg:items-start">
-                        <div class="flex items-center gap-1 mb-4">
-                            <div class="flex text-brand-accent text-xs">
+                    <!-- LADO ESQUERDO: COPY ORIGINAL -->
+                    <div class="w-full lg:w-[55%] flex flex-col items-start text-left">
+                        
+                        <!-- Reviews -->
+                        <div class="flex items-center gap-1 mb-6">
+                            <div class="flex text-yellow-400 text-sm">
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             </div>
-                            <span class="ml-2 text-gray-500 font-bold text-[10px] lg:text-xs uppercase tracking-widest">18,000+ VERIFIED CUSTOMER REVIEWS</span>
+                            <span class="ml-2 text-brand-deep font-bold text-xs uppercase tracking-tight">18,000+ VERIFIED CUSTOMER REVIEWS</span>
                         </div>
                         
-                        <h1 class="text-3xl lg:text-6xl font-black leading-[1.1] text-gray-900 mb-4">
+                        <!-- Headline Original -->
+                        <h1 class="text-3xl lg:text-5xl font-black leading-tight text-brand-deep mb-4">
                             End muscle tension, soreness, and fatigue — <span class="text-brand-accent">starting today.</span>
                         </h1>
                         
-                        <p class="text-brand-accent font-black text-lg lg:text-xl tracking-widest uppercase mb-6">
+                        <p class="text-brand-deep font-black text-lg tracking-widest uppercase mb-6">
                             EMSense Massager Device™
                         </p>
-
-                        <p class="text-base lg:text-xl text-gray-600 leading-relaxed mb-8">
+                        
+                        <!-- Corpo da Copy Original -->
+                        <p class="text-sm lg:text-lg text-gray-700 leading-relaxed mb-8">
                             Whether it’s from work, workouts, or everyday stress — tight muscles steal your energy and mobility. 
-                            <strong>EMSense™</strong> delivers targeted EMS therapy that reaches deep beneath the skin to relax muscle fibers and bring fast, drug-free relief.
+                            <strong>EMSense™</strong> delivers targeted EMS therapy that reaches deep beneath the skin to relax muscle fibers, boost circulation, and bring fast, drug-free relief wherever you are.
                         </p>
 
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10 w-full max-w-lg">
-                            <div class="flex items-center gap-3">
-                                <div class="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
-                                    <i class="fas fa-check text-brand-accent text-[10px]"></i>
-                                </div>
-                                <span class="text-sm font-bold text-gray-700">19 Intensity Levels</span>
+                        <!-- Benefícios Originais -->
+                        <div class="space-y-3 mb-10">
+                            <div class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-green-500 text-lg"></i>
+                                <span class="text-sm font-bold text-gray-800">19 Intensity Levels</span>
                             </div>
-                            <div class="flex items-center gap-3">
-                                <div class="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
-                                    <i class="fas fa-check text-brand-accent text-[10px]"></i>
-                                </div>
-                                <span class="text-sm font-bold text-gray-700">8 Therapeutic Modes</span>
+                            <div class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-green-500 text-lg"></i>
+                                <span class="text-sm font-bold text-gray-800">8 Therapeutic Modes</span>
                             </div>
-                            <div class="flex items-center gap-3">
-                                <div class="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
-                                    <i class="fas fa-check text-brand-accent text-[10px]"></i>
-                                </div>
-                                <span class="text-sm font-bold text-gray-700">USB Rechargeable</span>
+                            <div class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-green-500 text-lg"></i>
+                                <span class="text-sm font-bold text-gray-800">USB Rechargeable</span>
                             </div>
-                            <div class="flex items-center gap-3">
-                                <div class="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
-                                    <i class="fas fa-check text-brand-accent text-[10px]"></i>
-                                </div>
-                                <span class="text-sm font-bold text-gray-700">Pocket-Sized Relief</span>
+                            <div class="flex items-center gap-2">
+                                <i class="fas fa-check-circle text-green-500 text-lg"></i>
+                                <span class="text-sm font-bold text-gray-800">Pocket-Sized Relief</span>
                             </div>
                         </div>
 
-                        <button onclick="scrollToSelector()" class="w-full lg:max-w-md bg-brand-accent text-white py-5 rounded-2xl font-black text-lg shadow-2xl pulse-accent uppercase tracking-wide hover:scale-[1.02] transition-all">
-                            👉 Claim My 60% Discount
+                        <!-- Botão CTA -->
+                        <button onclick="scrollToSelector()" class="w-full max-w-sm bg-brand-green text-white py-5 px-6 rounded-lg font-black text-lg shadow-lg flex items-center justify-between hover:brightness-110 transition-all uppercase mb-4">
+                            <span>GET 60% OFF TODAY ONLY!</span>
+                            <i class="fas fa-arrow-circle-right text-xl"></i>
                         </button>
+
+                        <!-- Barra de Stock -->
+                        <div class="w-full max-w-sm bg-white/50 border border-gray-200 rounded-lg py-2 px-4 flex items-center justify-between mb-6">
+                            <span class="text-[10px] font-bold text-gray-600 uppercase">Current stock level:</span>
+                            <div class="flex items-center gap-2">
+                                <div class="stock-bar">
+                                    <div class="stock-block active"></div>
+                                    <div class="stock-block"></div>
+                                    <div class="stock-block"></div>
+                                    <div class="stock-block"></div>
+                                </div>
+                                <span class="text-[10px] font-black text-red-600 uppercase">LOW</span>
+                            </div>
+                        </div>
+
+                        <!-- Selos de Segurança -->
+                        <div class="w-full max-w-sm flex flex-col items-center gap-3">
+                            <div class="flex items-center gap-1.5 text-[9px] text-gray-500 font-bold uppercase">
+                                <i class="fas fa-lock text-orange-400"></i>
+                                Guaranteed Safe & Secure Checkout SSL Certified
+                            </div>
+                            <div class="flex items-center gap-3 opacity-60 grayscale hover:grayscale-0 transition-all">
+                                <i class="fab fa-cc-visa text-2xl"></i>
+                                <i class="fab fa-cc-mastercard text-2xl"></i>
+                                <i class="fab fa-cc-stripe text-2xl"></i>
+                                <i class="fab fa-cc-paypal text-2xl"></i>
+                                <i class="fab fa-cc-apple-pay text-2xl"></i>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- LADO DIREITO: VÍDEO -->
-                    <div class="w-full lg:w-1/2 max-w-[500px] lg:max-w-none relative">
-                        <div class="absolute -inset-4 bg-brand-accent/5 rounded-[3rem] blur-3xl transform -z-10"></div>
+                    <div class="w-full lg:w-[45%] flex flex-col items-center">
                         <div class="video-container shadow-2xl border-4 border-white">
                             <video autoplay muted loop playsinline>
                                 <source src="images/em-masssageador.mp4" type="video/mp4">
                             </video>
                         </div>
-                        <!-- SELO DE DESCONTO FLUTUANTE -->
-                        <div class="absolute -top-6 -right-6 bg-brand-accent text-white w-20 h-20 lg:w-28 lg:h-28 rounded-full shadow-2xl flex flex-col items-center justify-center border-4 border-white z-20">
-                            <span class="text-[10px] lg:text-[14px] font-black uppercase leading-none">SAVE</span>
-                            <span class="text-2xl lg:text-4xl font-black leading-none">60%</span>
-                        </div>
+                        <p class="mt-4 text-[11px] font-black text-gray-400 uppercase tracking-[0.2em] italic">
+                            Real relief. Real recovery. Anytime you need it.
+                        </p>
                     </div>
 
                 </div>
             </section>
 
-            <!-- PROVA RÁPIDA -->
-            <section class="bg-gray-50 py-12 px-6 border-y border-gray-100 text-center">
-                <div class="max-w-4xl mx-auto">
-                    <h2 class="text-2xl lg:text-4xl font-black text-gray-900 mb-4 uppercase italic">Real relief. Real recovery. Anytime you need it.</h2>
-                    <p class="text-gray-600 leading-relaxed max-w-2xl mx-auto">
-                        EMSense™ targets the nervous system of the muscle to force relaxation, flushing out fatigue and restoring movement in minutes.
-                    </p>
-                </div>
-            </section>
-
-            <!-- SEGUNDA SESSÃO: OPÇÕES DE COMPRA 1, 2 E 3 -->
-            <section id="cta-options" class="px-6 pb-24 lg:px-8 pt-20 bg-brand-ice border-t border-blue-50">
+            <!-- SESSÃO 2: OPÇÕES DE COMPRA (1, 2 E 3) -->
+            <section id="cta-options" class="px-6 pb-24 lg:px-8 pt-20 bg-white">
                 <div class="max-w-7xl mx-auto">
                     <header class="text-center mb-16">
-                        <h2 class="text-3xl lg:text-5xl font-black text-brand-accent uppercase tracking-tighter italic leading-tight">CHOOSE YOUR EMSENSE™ PATH</h2>
+                        <h2 class="text-3xl lg:text-5xl font-black text-brand-deep uppercase tracking-tighter italic leading-tight">CHOOSE YOUR EMSENSE™ PATH</h2>
                     </header>
                     
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        
-                        <!-- OPÇÃO 1 — DIRECT CHECKOUT (DTC) -->
-                        <div class="bg-white rounded-3xl shadow-xl border-2 border-brand-accent relative overflow-hidden flex flex-col h-full transform transition-all z-10 hover:shadow-2xl">
+                        <!-- OPÇÃO 1 — OFFICIAL STORE -->
+                        <div class="bg-gray-50 rounded-3xl shadow-xl border-2 border-brand-accent relative overflow-hidden flex flex-col h-full hover:shadow-xl transition-all">
                             <div class="bg-brand-accent text-white text-center py-3 text-[10px] font-black uppercase tracking-widest">✅ BEST PRICE (60% OFF DEAL)</div>
                             <div class="p-8 flex-1 flex flex-col">
-                                <h3 class="text-2xl font-black text-brand-accent mb-1 tracking-tight">OFFICIAL STORE</h3>
+                                <h3 class="text-2xl font-black text-brand-deep mb-1 uppercase">OFFICIAL STORE</h3>
                                 <p class="text-gray-500 font-bold text-[10px] mb-2 uppercase tracking-wide">Fastest way to get EMSense delivered</p>
                                 <p class="text-gray-600 text-sm mb-6 leading-relaxed italic">Direct checkout for the lowest available price in the United States, Canada, and Australia.</p>
-                                
                                 <ul class="space-y-4 mb-8 text-sm">
                                     <li class="flex items-start gap-3 text-gray-700 font-medium"><i class="fas fa-check text-green-500 mt-1"></i><span>Full 60% discount applied</span></li>
-                                    <li class="flex items-start gap-3 text-gray-700 font-medium"><i class="fas fa-bolt text-brand-accent mt-1"></i><span>Deep-tissue EMS technology</span></li>
+                                    <li class="flex items-start gap-3 text-gray-700 font-medium"><i class="fas fa-bolt text-brand-accent mt-1"></i><span>Deep-tissue EMS recovery technology</span></li>
                                     <li class="flex items-start gap-3 text-gray-700 font-medium"><i class="fas fa-truck text-brand-accent mt-1"></i><span>Priority tracked shipping</span></li>
                                     <li class="flex items-start gap-3 text-gray-700 font-medium"><i class="fas fa-shield-alt text-brand-accent mt-1"></i><span>90-Day Satisfaction Promise</span></li>
                                 </ul>
-                                
                                 <div class="mt-auto">
-                                    <p class="text-[11px] text-red-600 font-bold mb-3 text-center uppercase tracking-tight"><i class="fas fa-exclamation-triangle mr-1"></i> VERY LOW STOCK REMAINING</p>
-                                    <a href="#" class="bg-brand-accent hover:bg-brand-accent/90 text-white w-full py-5 rounded-2xl font-black text-center block shadow-lg pulse-accent uppercase tracking-tight text-sm">👉 CLAIM DISCOUNT & CHECKOUT</a>
+                                    <a href="#" class="bg-brand-accent text-white w-full py-5 rounded-2xl font-black text-center block uppercase tracking-tight text-sm">CLAIM DISCOUNT & CHECKOUT</a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- OPÇÃO 2 — FULL THERAPY EXPERIENCE (TSL) -->
-                        <div class="bg-white rounded-3xl shadow-lg border border-gray-100 flex flex-col h-full hover:shadow-xl transition-all">
+                        <!-- OPÇÃO 2 — THERAPY MODES -->
+                        <div class="bg-white rounded-3xl shadow-lg border border-gray-100 flex flex-col h-full">
                             <div class="p-8 flex-1 flex flex-col">
-                                <h3 class="text-xl font-black text-brand-accent mb-1 uppercase tracking-tight">THERAPY MODES</h3>
+                                <h3 class="text-xl font-black text-brand-deep mb-1 uppercase tracking-tight">THERAPY MODES</h3>
                                 <p class="text-gray-500 font-bold text-[10px] mb-2 uppercase tracking-wide">Customize your recovery</p>
                                 <p class="text-gray-600 text-sm mb-6 leading-relaxed">Choose exactly how your body heals — whether you need deep muscle release or circulation boost.</p>
-                                
                                 <ul class="space-y-4 mb-8 text-[13px]">
                                     <li class="flex items-start gap-2 text-gray-700 font-medium"><i class="fas fa-heart-pulse text-brand-accent mt-1"></i><span>Massage, Kneading & Scraping</span></li>
                                     <li class="flex items-start gap-2 text-gray-700 font-medium"><i class="fas fa-circle-dot text-brand-accent mt-1"></i><span>Pressure, Tapping & Shaping</span></li>
@@ -236,20 +229,18 @@
                                     <li class="flex items-start gap-2 text-gray-700 font-medium"><i class="fas fa-feather text-brand-accent mt-1"></i><span>Ultra-lightweight portable design</span></li>
                                     <li class="flex items-start gap-2 text-gray-700 font-medium"><i class="fas fa-clock text-brand-accent mt-1"></i><span>Built-in smart session timer</span></li>
                                 </ul>
-                                
                                 <div class="mt-auto">
-                                    <a href="#" class="bg-gray-100 hover:bg-gray-200 text-brand-accent w-full py-4 rounded-2xl font-black text-center block transition-all uppercase tracking-tight text-xs">👉 VIEW FULL THERAPY DETAILS</a>
+                                    <a href="#" class="bg-gray-100 text-brand-deep w-full py-4 rounded-2xl font-black text-center block uppercase tracking-tight text-xs">VIEW FULL THERAPY DETAILS</a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- OPÇÃO 3 — EDITORIAL REVIEW (PRE-SELL) -->
-                        <div class="bg-white rounded-3xl shadow-lg border border-gray-100 flex flex-col h-full hover:shadow-xl transition-all">
+                        <!-- OPÇÃO 3 — EDITORIAL REVIEW -->
+                        <div class="bg-white rounded-3xl shadow-lg border border-gray-100 flex flex-col h-full">
                             <div class="p-8 flex-1 flex flex-col">
-                                <h3 class="text-xl font-black text-brand-accent mb-1 uppercase tracking-tight">CUSTOMER FEEDBACK</h3>
+                                <h3 class="text-xl font-black text-brand-deep mb-1 uppercase tracking-tight">CUSTOMER FEEDBACK</h3>
                                 <p class="text-gray-500 font-bold text-[10px] mb-2 uppercase tracking-wide">Why thousands trust EMSense</p>
-                                <p class="text-gray-600 text-sm mb-6 leading-relaxed italic">Verified real-world results from desk workers, athletes, and anyone tired of pain.</p>
-                                
+                                <p class="text-gray-600 text-sm mb-6 leading-relaxed italic">Verified real-world results from desk workers, athletes, and anyone tired of living with pain.</p>
                                 <ul class="space-y-4 mb-8 text-[13px]">
                                     <li class="flex items-start gap-2 text-gray-700 font-medium italic"><i class="fas fa-star text-yellow-400 mt-1"></i><span>"Saved my back after 8 hours at a desk."</span></li>
                                     <li class="flex items-start gap-2 text-gray-700 font-medium italic"><i class="fas fa-star text-yellow-400 mt-1"></i><span>"Better recovery than foam rolling."</span></li>
@@ -257,13 +248,11 @@
                                     <li class="flex items-start gap-2 text-gray-700 font-medium italic"><i class="fas fa-star text-yellow-400 mt-1"></i><span>"Small but surprisingly powerful."</span></li>
                                     <li class="flex items-start gap-2 text-gray-700 font-medium italic"><i class="fas fa-star text-yellow-400 mt-1"></i><span>"Best drug-free investment I’ve made."</span></li>
                                 </ul>
-                                
                                 <div class="mt-auto">
-                                    <a href="#" class="bg-gray-100 hover:bg-gray-200 text-brand-accent w-full py-4 rounded-2xl font-black text-center block transition-all uppercase tracking-tight text-xs">👉 READ FULL EDITORIAL REVIEW</a>
+                                    <a href="#" class="bg-gray-100 text-brand-deep w-full py-4 rounded-2xl font-black text-center block uppercase tracking-tight text-xs">READ FULL EDITORIAL REVIEW</a>
                                 </div>
                             </div>
                         </div>
-                        
                     </div>
                 </div>
             </section>
@@ -273,27 +262,24 @@
         <footer class="bg-brand-footer pt-16 pb-12 px-6 mt-auto text-white">
             <div class="max-w-5xl mx-auto flex flex-col items-center text-center">
                 <img src="images/EMSense logo white.svg" alt="EMSense Logo" class="h-8 md:h-10 w-auto mb-10">
-                
-                <div class="mb-10 px-4 py-2 border border-white/30 rounded-full text-[9px] lg:text-[10px] text-white/80 font-black uppercase tracking-widest bg-white/5">
-                    <i class="fas fa-certificate mr-2 text-blue-300"></i> Official EMSense™ Direct Retailer
+                <div class="mb-10 px-4 py-2 border border-white/30 rounded-full text-[9px] text-white/80 font-black uppercase tracking-widest bg-white/5">
+                    Authorized EMSense™ Global Distributor
                 </div>
-
                 <nav class="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-12 text-[10px] uppercase font-black tracking-widest text-white/60">
                     <button onclick="openModal('privacy')" class="hover:text-white transition">Privacy Policy</button>
-                    <button onclick="openModal('terms')" class="hover:text-white transition">Terms & Conditions</button>
+                    <button onclick="openModal('terms')" class="hover:text-white transition">Terms of Service</button>
                     <button onclick="openModal('shipping')" class="hover:text-white transition">Shipping Policy</button>
                     <button onclick="openModal('returns')" class="hover:text-white transition">Return Policy</button>
                     <button onclick="openModal('contact')" class="hover:text-white transition">Support</button>
                 </nav>
-
                 <div class="text-[9px] text-white/30 leading-relaxed max-w-4xl space-y-4">
                     <p>© 2026 EMSense Health. All rights reserved.</p>
-                    <p class="italic text-white/20">Disclaimer: EMSense™ is intended for muscle recovery and tension relief. Individual results may vary.</p>
+                    <p class="italic text-white/20">Disclaimer: EMSense™ is a wellness device. Consult your doctor if you have a pacemaker or are pregnant.</p>
                 </div>
             </div>
         </footer>
 
-        <!-- MODAIS -->
+        <!-- MODAL -->
         <div id="info-modal" class="fixed inset-0 bg-black/90 z-[100] hidden items-center justify-center p-4 backdrop-blur-md">
             <div class="bg-white rounded-3xl shadow-2xl w-full max-w-2xl max-h-[90vh] flex flex-col relative overflow-hidden">
                 <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-black z-10 p-2"><i class="fas fa-times text-xl"></i></button>
@@ -311,11 +297,11 @@
         
         function openModal(type) {
             const modalContentMap = {
-                'contact': `<h2 class="text-2xl font-black mb-6 text-brand-accent uppercase">Support</h2><p>Email: contact@emsense-recovery.com<br>Phone: 1-888-814-2188</p>`,
-                'privacy': `<h2 class="text-xl font-black mb-6 text-brand-accent uppercase">Privacy Policy</h2><p>Your data is encrypted and used only for shipping purposes.</p>`,
-                'shipping': `<h2 class="text-xl font-black mb-6 text-brand-accent uppercase">Shipping</h2><p>2-5 business days across USA, Canada, and Australia.</p>`,
-                'returns': `<h2 class="text-xl font-black mb-6 text-brand-accent uppercase">90-Day Guarantee</h2><p>Full refund if no relief is felt within 90 days.</p>`,
-                'terms': `<h2 class="text-xl font-black mb-6 text-brand-accent uppercase">Terms</h2><p>Must be 18+ to purchase. Follow user manual for safety.</p>`
+                'contact': `<h2 class="text-2xl font-black mb-6 text-brand-accent uppercase italic">SUPPORT</h2><p>Email: contact@emsense-recovery.com<br>Phone: 1-888-814-2188 (Available 24/7)</p>`,
+                'privacy': `<h2 class="text-xl font-black mb-6 text-brand-accent uppercase italic text-left">PRIVACY</h2><p class="text-xs text-left">We protect your data with SSL encryption.</p>`,
+                'shipping': `<h2 class="text-xl font-black mb-6 text-brand-accent uppercase italic text-left">SHIPPING</h2><p class="text-xs text-left">2-5 business days across USA, Canada, and Australia.</p>`,
+                'returns': `<h2 class="text-xl font-black mb-6 text-brand-accent uppercase italic text-left">GUARANTEE</h2><p class="text-xs text-left">90-Day Money-Back Guarantee.</p>`,
+                'terms': `<h2 class="text-xl font-black mb-6 text-brand-accent uppercase italic text-left">TERMS</h2><p class="text-xs text-left">Agree to user manual for safety.</p>`
             };
             document.getElementById('modal-content').innerHTML = modalContentMap[type];
             document.getElementById('info-modal').classList.remove('hidden');
