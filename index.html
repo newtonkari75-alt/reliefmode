@@ -39,7 +39,6 @@
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         .animate-fade-in-up { animation: fadeInUp 0.4s ease-out forwards; }
         
-        /* Contentor de vídeo proporcional */
         .video-container {
             position: relative;
             width: 100%;
@@ -58,12 +57,10 @@
             object-fit: cover;
         }
 
-        /* Barra de Stock Estilizada */
         .stock-bar { display: flex; gap: 4px; margin-top: 4px; }
         .stock-block { width: 16px; height: 16px; border: 1px solid #ddd; background-color: #fff; }
         .stock-block.active { background-color: #ef4444; border-color: #ef4444; }
 
-        /* Tabelas nos Modais */
         .modal-table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.8rem; }
         .modal-table th, .modal-table td { border: 1px solid #e2e8f0; padding: 8px; text-align: left; }
         .modal-table th { background-color: #f8fafc; font-weight: bold; }
@@ -96,11 +93,10 @@
 
         <main id="main-content">
             
-            <!-- SESSÃO 1: HERO (ALINHAMENTO PROPORCIONAL) -->
+            <!-- SESSÃO 1: HERO -->
             <section class="bg-hero-light py-10 lg:py-16 animate-fade-in-up">
                 <div class="max-w-7xl mx-auto px-6 lg:px-16 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
                     
-                    <!-- LADO ESQUERDO: COPY -->
                     <div class="w-full lg:w-[50%] flex flex-col items-start text-left">
                         <div class="flex items-center gap-1 mb-4">
                             <div class="flex text-yellow-400 text-xs">
@@ -167,7 +163,6 @@
                         </div>
                     </div>
 
-                    <!-- LADO DIREITO: VÍDEO -->
                     <div class="w-full lg:w-[45%] flex flex-col items-center">
                         <div class="video-container border-4 border-white">
                             <video autoplay muted loop playsinline>
@@ -181,7 +176,7 @@
                 </div>
             </section>
 
-            <!-- SECÇÃO 2: OPÇÕES DE COMPRA (ATUALIZADA) -->
+            <!-- SECÇÃO 2: OPÇÕES DE COMPRA -->
             <section id="cta-options" class="py-20 bg-white">
                 <div class="max-w-7xl mx-auto px-6 lg:px-8">
                     <header class="text-center mb-16">
@@ -189,7 +184,7 @@
                     </header>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                         
-                        <!-- OPTION 1 — DIRECT CHECKOUT (DTC) -->
+                        <!-- OPTION 1 -->
                         <div class="bg-gray-50 rounded-3xl shadow-lg border-2 border-brand-accent relative overflow-hidden flex flex-col h-full transform transition-all z-10 hover:-translate-y-1">
                             <div class="bg-brand-accent text-white text-center py-3 text-[10px] font-black uppercase tracking-widest">✅ BEST PRICE (60% OFF DEAL)</div>
                             <div class="p-8 flex-1 flex flex-col">
@@ -209,16 +204,16 @@
                             </div>
                         </div>
 
-                        <!-- OPTION 2 — HOW IT WORKS (TSL) -->
+                        <!-- OPTION 2 -->
                         <div class="bg-white rounded-3xl shadow-md border border-gray-100 flex flex-col h-full hover:shadow-lg transition-all">
                             <div class="p-8 flex-1 flex flex-col">
                                 <h3 class="text-xl font-black text-brand-deep mb-1 uppercase tracking-tight leading-tight">HOW IT WORKS</h3>
                                 <p class="text-gray-500 font-bold text-[10px] mb-2 uppercase tracking-wide">Discover the science behind lasting relief</p>
-                                <p class="text-gray-600 text-sm mb-6 leading-relaxed">Learn why burning, tingling, and numbness happen — and how EMSense’s Triple Therapy (heat + compression + stimulation) supports circulation and nerve comfort instead of masking symptoms.</p>
+                                <p class="text-gray-600 text-sm mb-6 leading-relaxed">Learn why burning, tingling, and numbness happen — and how EMSense’s Triple Therapy supports circulation and nerve comfort.</p>
                                 <ul class="space-y-4 mb-8 text-[13px]">
                                     <li class="flex items-start gap-2 text-gray-700 font-medium"><i class="fas fa-brain text-brand-accent mt-1"></i><span>The real cause of nerve-related discomfort</span></li>
                                     <li class="flex items-start gap-2 text-gray-700 font-medium"><i class="fas fa-fire text-brand-accent mt-1"></i><span>How heat helps restore oxygen flow</span></li>
-                                    <li class="flex items-start gap-2 text-gray-700 font-medium"><i class="fas fa-compress-arrows-alt text-blue-500 mt-1"></i><span>Why compression boosts circulation</span></li>
+                                    <li class="flex items-start gap-2 text-gray-700 font-medium"><i class="fas fa-compress-arrows-alt text-brand-accent mt-1"></i><span>Why compression boosts circulation</span></li>
                                     <li class="flex items-start gap-2 text-gray-700 font-medium"><i class="fas fa-bolt text-brand-accent mt-1"></i><span>How stimulation reawakens tired nerves</span></li>
                                     <li class="flex items-start gap-2 text-gray-700 font-medium"><i class="fas fa-chart-bar text-brand-accent mt-1"></i><span>Backed by clinically used methods</span></li>
                                 </ul>
@@ -228,11 +223,11 @@
                             </div>
                         </div>
 
-                        <!-- OPTION 3 — CUSTOMER FEEDBACK (EDITORIAL) -->
+                        <!-- OPTION 3 -->
                         <div class="bg-white rounded-3xl shadow-md border border-gray-100 flex flex-col h-full hover:shadow-lg transition-all">
                             <div class="p-8 flex-1 flex flex-col text-left">
                                 <h3 class="text-xl font-black text-brand-deep mb-1 uppercase tracking-tight leading-tight text-left">CUSTOMER FEEDBACK</h3>
-                                <p class="text-gray-500 font-bold text-[10px] mb-2 uppercase tracking-wide">Why thousands trust EMSense for daily recovery</p>
+                                <p class="text-gray-500 font-bold text-[10px] mb-2 uppercase tracking-wide">Why thousands trust EMSense</p>
                                 <p class="text-gray-600 text-sm mb-6 leading-relaxed">Real-world experiences from desk workers, travelers, athletes, and anyone tired of living with foot discomfort.</p>
                                 <ul class="space-y-4 mb-8 text-[13px]">
                                     <li class="flex items-start gap-2 text-gray-700 font-medium italic"><i class="fas fa-star text-yellow-400 mt-1"></i><span>"My feet feel lighter after long days."</span></li>
@@ -273,7 +268,7 @@
 
         <!-- MODAL SYSTEM -->
         <div id="info-modal" class="fixed inset-0 bg-black/90 z-[100] hidden items-center justify-center p-4 backdrop-blur-md">
-            <div class="bg-white rounded-3xl shadow-2xl w-full max-w-4xl max-h-[90vh] flex flex-col relative overflow-hidden">
+            <div class="bg-white rounded-3xl shadow-2xl w-full max-w-3xl max-h-[90vh] flex flex-col relative overflow-hidden">
                 <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-black z-10 p-2"><i class="fas fa-times text-xl"></i></button>
                 <div id="modal-content" class="p-8 lg:p-12 overflow-y-auto text-gray-700 text-sm leading-relaxed"></div>
                 <div class="p-6 border-t bg-gray-50 rounded-b-xl flex justify-end">
@@ -288,11 +283,65 @@
         
         function openModal(type) {
             const modalContentMap = {
-                'contact': `<h2 class="text-2xl font-black mb-4 text-brand-deep">QUESTIONS?</h2><p>Email: support@tryemsense.com<br>Address: 1111B S Governors Ave STE 37729 Dover, DE 19904</p>`,
-                'privacy': `<h2 class="text-2xl font-black mb-4 text-brand-deep">Privacy Policy</h2><p>We use high-level encryption to protect your data globally.</p>`,
-                'shipping': `<h2 class="text-2xl font-black mb-4 text-brand-deep">Shipping Policy</h2><p>Worldwide tracked shipping. Orders processed in 24h.</p>`,
-                'returns': `<h2 class="text-2xl font-black mb-4 text-brand-deep">Return Policy</h2><p>30-Day Money-Back Guarantee. Contact support for RMA.</p>`,
-                'terms': `<h2 class="text-2xl font-black mb-4 text-brand-deep">Terms of Sale</h2><p>By purchasing, you agree to our global service terms.</p>`
+                'contact': `
+                    <h2 class="text-2xl font-black mb-4 text-brand-deep">CONTACT US</h2>
+                    <p>For any returns, refunds, complaints or enquiries, please use the details below:</p>
+                    <div class="mt-6 space-y-4">
+                        <p><strong>Email:</strong> support@tryemsense.com</p>
+                        <p><strong>Phone:</strong> +1 (855) 677-6133</p>
+                        <p><strong>Address for Correspondence:</strong> 1111B S Governors Ave STE 37729 Dover, DE 19904</p>
+                    </div>
+                `,
+                'privacy': `
+                    <h2 class="text-2xl font-black mb-4 text-brand-deep">PRIVACY POLICY</h2>
+                    <p>EMSense is committed to protecting your privacy. We act as data controllers in accordance with Regulation EU 2016/679 (GDPR) and CCPA.</p>
+                    <h3 class="font-bold mt-6">1. Information Collection</h3>
+                    <p>We collect name, address, email, and payment "tokens" to process orders and provide personalized marketing material.</p>
+                    <h3 class="font-bold mt-4">2. Data Usage</h3>
+                    <p>Your data is used to fulfill contracts, ensure website security, and handle complaints. We keep data for up to 10 years for legal protection.</p>
+                    <h3 class="font-bold mt-4">3. Security</h3>
+                    <p>We use SSL encryption and follow PCI-DSS standards for all transactions. No data is stored on our servers beyond what is necessary for the transaction.</p>
+                `,
+                'shipping': `
+                    <h2 class="text-2xl font-black mb-4 text-brand-deep">SHIPPING POLICY</h2>
+                    <p>We offer worldwide shipping using swift and secure delivery methods.</p>
+                    <ul class="list-disc pl-5 mt-4 space-y-2">
+                        <li><strong>Processing Time:</strong> Orders typically processed within 24 hours.</li>
+                        <li><strong>Shipping Charges:</strong> Starting from $4.95 (varies with promotions).</li>
+                        <li><strong>Tracking:</strong> Real-time tracking available at tracking.tryemsense.com</li>
+                    </ul>
+                    <h3 class="font-bold mt-6">Estimated Delivery:</h3>
+                    <table class="modal-table">
+                        <thead><tr><th>Region</th><th>Days (Business)</th></tr></thead>
+                        <tbody>
+                            <tr><td>United States</td><td>2-5 days</td></tr>
+                            <tr><td>UK, Europe, Canada</td><td>10-15 days</td></tr>
+                            <tr><td>Australia, NZ, South America</td><td>12-18 days</td></tr>
+                        </tbody>
+                    </table>
+                `,
+                'returns': `
+                    <h2 class="text-2xl font-black mb-4 text-brand-deep">RETURN & REFUND POLICY</h2>
+                    <h3 class="font-bold">1. 30-Day Satisfaction Guarantee</h3>
+                    <p>Applies to first-time subscription orders. Request a refund within 30 days of receipt if you aren't satisfied.</p>
+                    <h3 class="font-bold mt-4">2. Standard Returns</h3>
+                    <p>Items must be unopened, unused, and in original packaging. You are responsible for return shipping costs.</p>
+                    <h3 class="font-bold mt-4">3. Process</h3>
+                    <p>Contact support at support@tryemsense.com to register your return. <strong>Do not ship back before approval.</strong></p>
+                    <p class="mt-4"><strong>Return Address:</strong> Orber Str. 10, 60386 Frankfurt am Main, Germany.</p>
+                `,
+                'terms': `
+                    <h2 class="text-2xl font-black mb-4 text-brand-deep">TERMS OF SALE</h2>
+                    <p>Governed by FONSLIFE TRADING - FZCO (Dubai UAE). By placing an order, you agree to these terms.</p>
+                    <h3 class="font-bold mt-6">1. Personal Use Only</h3>
+                    <p>Products are sold for personal use. Reselling or commercial distribution is prohibited.</p>
+                    <h3 class="font-bold mt-4">2. Medical Disclaimer</h3>
+                    <p>Material is for informational purposes only. Not intended as medical advice or a substitute for a physician's care. Consult a doctor before use.</p>
+                    <h3 class="font-bold mt-4">3. Arbitration</h3>
+                    <p>Disputes are resolved via mandatory binding arbitration through the Dubai International Arbitration Centre (DIAC).</p>
+                    <h3 class="font-bold mt-4">4. Billing</h3>
+                    <p>Subscription renewals occur every 30, 60, or 90 days. Cancellations must be made 24 hours prior to rebilling.</p>
+                `
             };
             document.getElementById('modal-content').innerHTML = modalContentMap[type];
             document.getElementById('info-modal').classList.remove('hidden');
