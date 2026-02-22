@@ -10,15 +10,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
-    <!-- SEO INVISÍVEL - Keywords Globais -->
+    <!-- SEO INVISÍVEL - Estratégia Avançada de Ranqueamento -->
     <title>EMSense™ Official | Advanced Triple Therapy Massager for Neuropathy & Foot Pain</title>
     <meta name="title" content="EMSense™ Official | Advanced Triple Therapy Massager for Neuropathy & Foot Pain">
-    <meta name="description" content="Stop suffering from foot pain, burning, and numbness. EMSense™ Triple Therapy (Heat + Compression + EMS) provides instant neuropathy relief. Bestselling foot massager in USA, UK, Canada, and Australia.">
+    <meta name="description" content="Help relieve burning, tingling, and numbness in your feet. EMSense™ utilizes Triple Therapy technology to support circulation and nerve comfort. 60% OFF today.">
     <meta name="keywords" content="EMSense massager, neuropathy relief, foot pain treatment, chronic foot pain, burning feet relief, tingling numbness feet, triple therapy foot massager, best foot massager for neuropathy Australia, foot circulation booster Canada, nerve pain relief UK, EMSense official store USA">
     
     <link rel="canonical" href="https://reliefmode.vercel.app/">
-    
-    <!-- FAVICON CORRIGIDO PARA .JPG -->
     <link rel="icon" type="image/jpeg" href="images/faviconV2.jpg">
     
     <!-- OPEN GRAPH -->
@@ -64,7 +62,7 @@
             --brand-green: #28A745;
             --bg-light-cyan: #F0F9FA; 
         }
-        body { font-family: 'Inter', sans-serif; background-color: white; margin: 0; }
+        body { font-family: 'Inter', sans-serif; background-color: white; margin: 0; overflow-x: hidden; }
         .text-brand-accent { color: var(--brand-deep); }
         .bg-brand-accent { background-color: var(--brand-deep); }
         .bg-brand-green { background-color: var(--brand-green); }
@@ -82,25 +80,22 @@
             padding-bottom: 100%; 
             height: 0;
             overflow: hidden;
-            border-radius: 1.5rem;
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            border-radius: 1.25rem;
+            box-shadow: 0 15px 30px -5px rgba(0, 38, 76, 0.15);
         }
         .video-container video {
             position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;
         }
 
-        .stock-bar { display: flex; gap: 4px; margin-top: 4px; }
-        .stock-block { width: 16px; height: 16px; border: 1px solid #ddd; background-color: #fff; }
+        .stock-bar { display: flex; gap: 3px; margin-top: 4px; }
+        .stock-block { width: 14px; height: 14px; border: 1px solid #ddd; background-color: #fff; border-radius: 2px; }
         .stock-block.active { background-color: #ef4444; border-color: #ef4444; }
 
-        .modal-table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.8rem; }
-        .modal-table th, .modal-table td { border: 1px solid #e2e8f0; padding: 8px; text-align: left; }
-        .modal-table th { background-color: #f8fafc; font-weight: bold; }
-
-        /* Ajustes Mobile específicos */
         @media (max-width: 1024px) {
-            .mobile-center-text { text-align: center !important; align-items: center !important; }
-            .mobile-video-spacing { margin-top: 1.5rem; margin-bottom: 1.5rem; }
+            .mobile-center-all { text-align: center !important; align-items: center !important; }
+            .mobile-padding { padding-left: 1.25rem; padding-right: 1.25rem; }
+            .mobile-video-box { margin-top: 1.25rem; margin-bottom: 1.25rem; width: 100%; max-width: 400px; }
+            .mobile-benefit-grid { grid-template-columns: 1fr !important; gap: 0.5rem !important; }
         }
     </style>
 </head>
@@ -111,111 +106,111 @@
         <!-- HEADER -->
         <header id="top-nav" class="flex flex-col w-full">
             <div class="bg-brand-ice py-2 px-2 border-b border-gray-200 w-full relative">
-                <div class="flex justify-center items-center gap-4 md:gap-8 text-brand-accent">
+                <div class="flex justify-center items-center gap-3 md:gap-8 text-brand-accent">
                     <div class="flex items-center gap-1.5">
-                        <i class="fas fa-globe text-[10px]"></i>
-                        <span class="text-[9px] sm:text-xs font-bold uppercase tracking-tight" data-i18n="top_bar_shipping">FREE TRACKED SHIPPING WORLDWIDE</span>
+                        <i class="fas fa-globe text-[9px]"></i>
+                        <span class="text-[8px] sm:text-xs font-bold uppercase tracking-tight" data-i18n="top_bar_shipping">FREE TRACKED SHIPPING WORLDWIDE</span>
                     </div>
                     <div class="w-px h-3 bg-gray-300"></div>
                     <div class="flex items-center gap-1.5">
-                        <i class="fas fa-heart-pulse text-[10px]"></i>
-                        <span class="text-[9px] sm:text-xs font-bold uppercase tracking-tight" data-i18n="top_bar_relief">100% DRUG-FREE RELIEF</span>
+                        <i class="fas fa-heart-pulse text-[9px]"></i>
+                        <span class="text-[8px] sm:text-xs font-bold uppercase tracking-tight" data-i18n="top_bar_relief">100% DRUG-FREE RELIEF</span>
                     </div>
                 </div>
             </div>
 
             <div class="pt-4 pb-4 px-5 bg-brand-accent flex justify-center border-b border-white/10">
-                <img src="images/EMSense logo white.svg" alt="EMSense Official Logo" class="h-8 md:h-10 w-auto">
+                <img src="images/EMSense logo white.svg" alt="EMSense Official Logo" class="h-7 md:h-10 w-auto">
             </div>
         </header>
 
         <main id="main-content">
             
-            <!-- SECTION 1: HERO (OTIMIZADO PARA ORDEM E ALINHAMENTO MOBILE) -->
-            <section class="bg-hero-light py-8 lg:py-16 animate-fade-in-up">
-                <div class="max-w-7xl mx-auto px-5 lg:px-16 flex flex-col lg:flex-row items-center lg:items-start justify-between gap-4 lg:gap-16">
+            <!-- SECTION 1: HERO (OPTIMIZED MOBILE FLOW) -->
+            <section class="bg-hero-light py-8 lg:py-16 animate-fade-in-up overflow-hidden">
+                <div class="max-w-7xl mx-auto px-5 lg:px-16 flex flex-col lg:flex-row items-center lg:items-start justify-between gap-2 lg:gap-16">
                     
-                    <!-- BLOCO 1: TÍTULO E AVALIAÇÕES (ORDEM 1) -->
-                    <div class="w-full lg:w-[50%] flex flex-col items-start text-left mobile-center-text order-1">
+                    <!-- ORDER 1: TITLE BLOCK -->
+                    <div class="w-full lg:w-[50%] flex flex-col items-start text-left mobile-center-all order-1">
                         <div class="flex items-center gap-1 mb-3 lg:mb-4">
-                            <div class="flex text-yellow-400 text-xs">
+                            <div class="flex text-yellow-400 text-[10px] lg:text-xs">
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             </div>
-                            <span class="ml-2 text-brand-deep font-bold text-[10px] lg:text-xs uppercase tracking-tight" data-i18n="reviews_count">18,000+ VERIFIED POSITIVE REVIEWS</span>
+                            <span class="ml-2 text-brand-deep font-bold text-[9px] lg:text-xs uppercase tracking-tight" data-i18n="reviews_count">18,000+ VERIFIED POSITIVE REVIEWS</span>
                         </div>
                         
-                        <h1 class="text-[1.6rem] lg:text-[2.8rem] font-black leading-[1.15] lg:leading-[1.1] text-brand-deep mb-3 lg:mb-4 tracking-tight" data-i18n="hero_h1">
+                        <h1 class="text-[1.5rem] lg:text-[2.8rem] font-black leading-[1.15] lg:leading-[1.1] text-brand-deep mb-3 tracking-tight" data-i18n="hero_h1">
                             Help relieve muscle tension, soreness, and fatigue — <span class="text-brand-accent">starting today.*</span>
                         </h1>
                         
-                        <p class="text-brand-deep font-black text-xs lg:text-base tracking-[0.15em] lg:tracking-widest uppercase mb-4 opacity-90">
+                        <p class="text-brand-deep font-black text-[10px] lg:text-base tracking-[0.12em] lg:tracking-widest uppercase mb-4 opacity-90">
                             EMSense Massager Device™
                         </p>
                     </div>
 
-                    <!-- BLOCO 2: VÍDEO (ORDEM 2 NO MOBILE, COLUNA DIREITA NO DESKTOP) -->
-                    <div class="w-full lg:w-[45%] flex flex-col items-center order-2 lg:order-last lg:mt-0 mobile-video-spacing">
-                        <div class="video-container border-4 border-white max-w-[450px] lg:max-w-none">
+                    <!-- ORDER 2: VIDEO BLOCK -->
+                    <div class="w-full lg:w-[45%] flex flex-col items-center order-2 lg:order-last lg:mt-0 mobile-video-box">
+                        <div class="video-container border-[3px] border-white">
                             <video autoplay muted loop playsinline poster="images/faviconV2.jpg">
                                 <source src="images/em-masssageador.mp4" type="video/mp4">
                             </video>
                         </div>
-                        <p class="mt-3 lg:mt-4 text-[9px] lg:text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] italic text-center" data-i18n="video_caption">
+                        <p class="mt-3 text-[9px] font-black text-gray-400 uppercase tracking-[0.15em] italic text-center" data-i18n="video_caption">
                             Real neuropathy relief. Anywhere you need it.
                         </p>
                     </div>
 
-                    <!-- BLOCO 3: TEXTO, BENEFÍCIOS E BOTÃO (ORDEM 3 NO MOBILE, ABAIXO DO TÍTULO NO DESKTOP) -->
-                    <div class="w-full lg:w-[50%] flex flex-col items-start text-left mobile-center-text order-3 lg:-mt-10">
-                        <p class="text-sm lg:text-[1.05rem] text-gray-700 leading-relaxed mb-6 max-w-lg" data-i18n="hero_p">
+                    <!-- ORDER 3: DESCRIPTION, BENEFITS & CTA -->
+                    <div class="w-full lg:w-[50%] flex flex-col items-start text-left mobile-center-all order-3 lg:-mt-12">
+                        <p class="text-[0.9rem] lg:text-[1.05rem] text-gray-700 leading-relaxed mb-6 max-w-lg lg:mt-4" data-i18n="hero_p">
                             Whether it’s from work, workouts, or everyday stress — tight muscles steal your energy and mobility. 
                             <strong>EMSense™</strong> delivers targeted EMS therapy that reaches deep beneath the skin to relax muscle fibers and boost circulation.*
                         </p>
 
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 lg:gap-y-3 mb-8 w-full max-w-md text-left">
-                            <div class="flex items-center gap-2">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5 mb-8 w-full max-w-md text-left mobile-benefit-grid">
+                            <div class="flex items-center gap-2.5">
                                 <i class="fas fa-check-circle text-green-500 text-base" aria-hidden="true"></i>
-                                <span class="text-xs lg:text-sm font-bold text-gray-800" data-i18n="feat_1">19 Intensity Levels</span>
+                                <span class="text-[13px] lg:text-sm font-bold text-gray-800" data-i18n="feat_1">19 Intensity Levels</span>
                             </div>
-                            <div class="flex items-center gap-2">
+                            <div class="flex items-center gap-2.5">
                                 <i class="fas fa-check-circle text-green-500 text-base" aria-hidden="true"></i>
-                                <span class="text-xs lg:text-sm font-bold text-gray-800" data-i18n="feat_2">8 Therapeutic Modes</span>
+                                <span class="text-[13px] lg:text-sm font-bold text-gray-800" data-i18n="feat_2">8 Therapeutic Modes</span>
                             </div>
-                            <div class="flex items-center gap-2">
+                            <div class="flex items-center gap-2.5">
                                 <i class="fas fa-check-circle text-green-500 text-base" aria-hidden="true"></i>
-                                <span class="text-xs lg:text-sm font-bold text-gray-800" data-i18n="feat_3">USB Rechargeable</span>
+                                <span class="text-[13px] lg:text-sm font-bold text-gray-800" data-i18n="feat_3">USB Rechargeable</span>
                             </div>
-                            <div class="flex items-center gap-2">
+                            <div class="flex items-center gap-2.5">
                                 <i class="fas fa-check-circle text-green-500 text-base" aria-hidden="true"></i>
-                                <span class="text-xs lg:text-sm font-bold text-gray-800" data-i18n="feat_4">Pocket-Sized Relief</span>
+                                <span class="text-[13px] lg:text-sm font-bold text-gray-800" data-i18n="feat_4">Pocket-Sized Relief</span>
                             </div>
                         </div>
 
-                        <!-- CTA PRINCIPAL -->
-                        <button onclick="scrollToSelector()" class="w-full max-w-[400px] bg-brand-green text-white py-4 lg:py-5 px-6 rounded-xl font-black text-base lg:text-lg shadow-xl flex items-center justify-between hover:brightness-110 transition-all uppercase mb-4" aria-label="Claim your 60 percent discount now">
+                        <!-- MAIN CTA -->
+                        <button onclick="scrollToSelector()" class="w-full max-w-[420px] bg-brand-green text-white py-4 lg:py-5 px-6 rounded-xl font-black text-base lg:text-lg shadow-xl flex items-center justify-between hover:scale-[1.01] transition-all uppercase mb-4">
                             <span data-i18n="btn_cta">GET 60% OFF TODAY!</span>
                             <i class="fas fa-arrow-circle-right text-xl"></i>
                         </button>
 
-                        <!-- STATUS DE ESTOQUE -->
-                        <div class="w-full max-w-[400px] bg-white/50 border border-gray-200 rounded-xl py-2 px-4 flex items-center justify-between mb-2">
+                        <!-- STOCK BAR -->
+                        <div class="w-full max-w-[420px] bg-white/60 border border-gray-200 rounded-xl py-2 px-4 flex items-center justify-between mb-2">
                             <span class="text-[9px] lg:text-[10px] font-bold text-gray-600 uppercase" data-i18n="stock_text">Live stock status:</span>
                             <div class="flex items-center gap-2">
                                 <div class="stock-bar" aria-label="Low stock indicator">
                                     <div class="stock-block active"></div><div class="stock-block"></div><div class="stock-block"></div><div class="stock-block"></div>
                                 </div>
-                                <span class="text-[9px] lg:text-[10px] font-black text-red-600 uppercase tracking-tighter" data-i18n="stock_low">LOW</span>
+                                <span class="text-[9px] lg:text-[10px] font-black text-red-600 uppercase" data-i18n="stock_low">LOW</span>
                             </div>
                         </div>
-                        <p class="text-[9px] lg:text-[10px] text-gray-400 mb-8 italic lg:mb-6" data-i18n="hero_disclaimer">*Results based on individual conditions. See full disclaimer below.</p>
+                        <p class="text-[9px] text-gray-400 mb-8 italic lg:mb-6" data-i18n="hero_disclaimer">*Results based on individual conditions. See full disclaimer below.</p>
 
-                        <!-- SELOS DE SEGURANÇA -->
-                        <div class="w-full max-w-[400px] flex flex-col items-center gap-3">
+                        <!-- TRUST SEALS -->
+                        <div class="w-full max-w-[420px] flex flex-col items-center gap-4">
                             <div class="flex items-center gap-1.5 text-[8px] lg:text-[9px] text-gray-500 font-bold uppercase" data-i18n="secure_checkout">
                                 <i class="fas fa-lock text-orange-400"></i>
                                 Secure Payment Processing SSL Verified
                             </div>
-                            <div class="flex items-center gap-3 opacity-40 grayscale hover:grayscale-0 transition-all">
+                            <div class="flex items-center gap-4 opacity-40 grayscale hover:grayscale-0 transition-all">
                                 <i class="fab fa-cc-visa text-xl lg:text-2xl"></i>
                                 <i class="fab fa-cc-mastercard text-xl lg:text-2xl"></i>
                                 <i class="fab fa-cc-stripe text-xl lg:text-2xl"></i>
@@ -228,7 +223,7 @@
                 </div>
             </section>
 
-            <!-- SECTION 2: CHOOSE YOUR PATH -->
+            <!-- SECTION 2: OPTIONS -->
             <section id="cta-options" class="py-20 bg-white border-t border-gray-100">
                 <div class="max-w-7xl mx-auto px-6 lg:px-8">
                     <header class="text-center mb-16">
@@ -265,7 +260,7 @@
                                 <ul class="space-y-4 mb-8 text-[13px]">
                                     <li class="flex items-start gap-2 text-gray-700 font-medium"><i class="fas fa-brain text-brand-accent mt-1"></i><span data-i18n="opt2_li1">The real cause of nerve-related discomfort</span></li>
                                     <li class="flex items-start gap-2 text-gray-700 font-medium"><i class="fas fa-fire text-brand-accent mt-1"></i><span data-i18n="opt2_li2">How heat helps restore oxygen flow</span></li>
-                                    <li class="flex items-start gap-2 text-gray-700 font-medium"><i class="fas fa-compress-arrows-alt text-blue-500 mt-1"></i><span data-i18n="opt2_li3">Why compression boosts circulation</span></li>
+                                    <li class="flex items-start gap-2 text-gray-700 font-medium"><i class="fas fa-compress-arrows-alt text-brand-accent mt-1"></i><span data-i18n="opt2_li3">Why compression boosts circulation</span></li>
                                     <li class="flex items-start gap-2 text-gray-700 font-medium"><i class="fas fa-bolt text-brand-accent mt-1"></i><span data-i18n="opt2_li4">How stimulation reawakens tired nerves</span></li>
                                     <li class="flex items-start gap-2 text-gray-700 font-medium"><i class="fas fa-chart-bar text-brand-accent mt-1"></i><span data-i18n="opt2_li5">Backed by clinically used methods</span></li>
                                 </ul>
@@ -299,9 +294,9 @@
         </main>
 
         <!-- FOOTER -->
-        <footer class="bg-brand-footer pt-16 pb-12 px-6 mt-auto text-white">
+        <footer class="bg-brand-footer pt-16 pb-8 px-6 mt-auto text-white">
             <div class="max-w-7xl mx-auto flex flex-col items-center text-center">
-                <img src="images/EMSense logo white.svg" alt="EMSense Global" class="h-8 md:h-10 w-auto mb-10">
+                <img src="images/EMSense logo white.svg" alt="EMSense Global - Official Store" class="h-8 md:h-10 w-auto mb-10">
                 
                 <nav class="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-12 text-[10px] uppercase font-black tracking-widest text-white/60">
                     <button onclick="openModal('privacy')" class="hover:text-white transition">Privacy Policy</button>
@@ -311,11 +306,18 @@
                     <button onclick="openModal('contact')" class="hover:text-white transition">Contact Us</button>
                 </nav>
 
+                <!-- LEGAL & GOOGLE ADS COMPLIANCE -->
                 <div class="text-[10px] text-white/40 leading-relaxed max-w-5xl space-y-6 border-t border-white/10 pt-10">
                     <p>EMSense™ is owned and operated by <strong>FONSLIFE TRADING - FZCO</strong>. Registered Address: Dubai Silicon Oasis, DDP, Building A1, Dubai, UAE.</p>
+                    
                     <p class="italic" data-i18n="disclaimer_med"><strong>*Medical Disclaimer:</strong> The statements made on this website have not been evaluated by the Food and Drug Administration (FDA) or any other medical body. This product is not intended to diagnose, treat, cure, or prevent any disease. Results are based on clinical methods; experiences vary. Consult a professional before use.</p>
+                    
                     <p>This site is not a part of the Google website or Google Inc. Additionally, this site is NOT endorsed by Google in any way. Google is a trademark of Google, Inc.</p>
-                    <p>© 2026 EMSense Health. All rights reserved.</p>
+                    
+                    <div class="mt-8 pt-8 border-t border-white/5 flex flex-col items-center gap-1">
+                        <p class="text-white/60 font-black tracking-[0.2em] uppercase" data-i18n="auth_distributor">Authorized EMSense™ Distributor</p>
+                        <p class="opacity-40">© 2026 EMSense Health. All rights reserved.</p>
+                    </div>
                 </div>
             </div>
         </footer>
@@ -346,24 +348,24 @@
                 'feat_3': 'Recarregável via USB',
                 'feat_4': 'Alívio de Bolso',
                 'btn_cta': 'GARANTIR 60% DE DESCONTO HOJE!',
-                'stock_text': 'Status de stock em tempo real:',
+                'stock_text': 'Status do estoque em tempo real:',
                 'stock_low': 'BAIXO',
                 'hero_disclaimer': '*Resultados baseados em condições individuais. Consulte o aviso legal no rodapé.',
-                'secure_checkout': 'Processamento de Pagamento Seguro SSL Verificado',
+                'secure_checkout': 'Pagamento Seguro SSL Verificado',
                 'video_caption': 'Alívio real da neuropatia. Em qualquer lugar que precise.',
                 'options_title': 'ESCOLHA O SEU PACOTE EMSENSE™',
-                'opt1_tag': '✅ MELHOR PREÇO (DESCONTO DE 60%)',
+                'opt1_tag': '✅ MELHOR PREÇO (60% DE DESCONTO)',
                 'opt1_title': 'LOJA OFICIAL',
                 'opt1_subtitle': 'A forma mais rápida de receber o EMSense',
-                'opt1_p': 'Checkout direto pelo menor preço disponível online — com processamento prioritário e seguro.',
+                'opt1_p': 'Checkout direto pelo menor preço online — com processamento prioritário e seguro.',
                 'opt1_li1': 'Desconto total de 60% aplicado',
                 'opt1_li2': 'Tecnologia EMS de recuperação profunda',
                 'opt1_li3': 'Envio rápido rastreado',
                 'opt1_li4': 'Promessa de Satisfação de 90 Dias',
-                'limited_stock': '🚨 Stock muito limitado disponível',
+                'limited_stock': '🚨 Estoque muito limitado disponível',
                 'opt1_btn': '👉 RECLAMAR DESCONTO E CHECKOUT',
                 'opt2_title': 'COMO FUNCIONA',
-                'opt2_subtitle': 'Descubra a ciência por trás do alívio duradouro',
+                'opt2_subtitle': 'Descubra a ciência por trás do alívio',
                 'opt2_p': 'Saiba por que a queimação e dormência acontecem — e como a Tripla Terapia do EMSense apoia a circulação e o conforto nervoso em vez de mascarar os sintomas.',
                 'opt2_li1': 'A causa real do desconforto nervoso',
                 'opt2_li2': 'Como o calor restaura o fluxo de oxigénio',
@@ -380,6 +382,7 @@
                 'rev4': '"Pequeno, mas surpreendentemente potente."',
                 'rev5': '"Melhor investimento livre de drogas que fiz."',
                 'opt3_btn': '👉 LER AVALIAÇÕES COMPLETAS',
+                'auth_distributor': 'Distribuidor Autorizado EMSense™',
                 'disclaimer_med': '<strong>*Aviso Médico:</strong> As declarações feitas neste site não foram avaliadas pela FDA ou qualquer outro órgão médico. Este produto não se destina a diagnosticar, tratar, curar ou prevenir qualquer doença. Resultados baseados em métodos clínicos; experiências variam. Consulte um profissional antes de usar.'
             }
         };
@@ -406,9 +409,9 @@
             const modalContentMap = {
                 'contact': `<h2 class="text-2xl font-black mb-4 text-brand-deep">CONTACT SUPPORT</h2><p>Email: support@tryemsense.com<br>Address: 1111B S Governors Ave STE 37729 Dover, DE 19904</p>`,
                 'privacy': `<h2 class="text-2xl font-black mb-4 text-brand-deep">PRIVACY</h2><p>Global data protection standard compliant. Information is used for order fulfillment only.</p>`,
-                'shipping': `<h2 class="text-2xl font-black mb-4 text-brand-deep">SHIPPING</h2><p>International tracked shipping. 2-5 days for USA, 10-15 days worldwide.</p>`,
+                'shipping': `<h2 class="text-2xl font-black mb-4 text-brand-deep">SHIPPING</h2><p>International tracked shipping available. Processing within 24h.</p>`,
                 'returns': `<h2 class="text-2xl font-black mb-4 text-brand-deep">RETURNS</h2><p>30-Day Money-Back Guarantee. Return to Frankfurt, Germany after approval.</p>`,
-                'terms': `<h2 class="text-2xl font-black mb-4 text-brand-deep">TERMS</h2><p>Personal use only. Agreement to DIAC arbitration for disputes.</p>`
+                'terms': `<h2 class="text-2xl font-black mb-4 text-brand-deep">TERMS</h2><p>Agreement to DIAC arbitration for disputes. Personal use only.</p>`
             };
             document.getElementById('modal-content').innerHTML = modalContentMap[type];
             document.getElementById('info-modal').classList.remove('hidden');
