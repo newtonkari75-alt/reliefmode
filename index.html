@@ -91,7 +91,6 @@
         .stock-block { width: 16px; height: 16px; border: 1px solid #cbd5e1; background-color: #fff; border-radius: 2px; }
         .stock-block.active { background-color: #ef4444; border-color: #ef4444; }
 
-        /* Grid Hero para Desktop e Mobile (Reordenado) */
         .hero-grid {
             display: grid;
             grid-template-areas: 
@@ -147,13 +146,13 @@
             </div>
 
             <div class="pt-4 pb-4 px-5 bg-brand-accent flex justify-center">
-                <img src="images/EMSense logo white.svg" alt="EMSense Official" class="h-7 md:h-10 w-auto">
+                <img src="images/EMSense logo white.svg" alt="EMSense Official Logo" class="h-7 md:h-10 w-auto">
             </div>
         </header>
 
         <main id="main-content">
             
-            <!-- SECTION 1: HERO (CSS GRID COM FUNDO DESTACADO) -->
+            <!-- SECTION 1: HERO -->
             <section class="bg-hero-section py-10 lg:py-20 animate-fade-in-up border-b border-slate-200">
                 <div class="max-w-7xl mx-auto px-6 lg:px-16 hero-grid">
                     
@@ -166,7 +165,6 @@
                             <span class="ml-2 text-brand-deep font-bold text-[10px] lg:text-xs uppercase tracking-tight" data-i18n="reviews_count">18,000+ VERIFIED POSITIVE REVIEWS</span>
                         </div>
                         
-                        <!-- TÍTULO SEM O ASTERISCO -->
                         <h1 class="text-[1.75rem] lg:text-[3.2rem] font-black leading-[1.1] text-brand-deep mb-4 tracking-tight" data-i18n="hero_h1">
                             Help relieve muscle tension, soreness, and fatigue — <span class="text-brand-accent">starting today.</span>
                         </h1>
@@ -214,17 +212,21 @@
                             </div>
                         </div>
 
-                        <!-- CTA PRINCIPAL -->
-                        <button onclick="scrollToSelector()" class="mobile-cta-btn w-full max-w-[440px] bg-brand-green text-white py-5 px-8 rounded-2xl font-black text-lg lg:text-xl shadow-2xl flex items-center justify-between hover:scale-[1.03] transition-all uppercase mb-5">
+                        <button onclick="scrollToSelector()" class="mobile-cta-btn w-full max-w-[440px] bg-brand-green text-white py-5 px-8 rounded-2xl font-black text-lg lg:text-xl shadow-2xl flex items-center justify-between hover:scale-[1.03] transition-all uppercase mb-3">
                             <span data-i18n="btn_cta">GET 60% OFF TODAY!</span>
                             <i class="fas fa-arrow-right text-xl"></i>
                         </button>
 
-                        <!-- STATUS DE ESTOQUE -->
+                        <!-- GARANTIA DE 30 DIAS DESTACADA -->
+                        <div class="flex items-center gap-2 mb-5 px-1">
+                            <i class="fas fa-shield-halved text-brand-deep text-sm"></i>
+                            <span class="text-[11px] lg:text-xs font-bold text-brand-deep uppercase tracking-wide" data-i18n="guarantee_badge">30-Day Money-Back Guarantee Included</span>
+                        </div>
+
                         <div class="w-full max-w-[440px] bg-white border border-slate-300 rounded-2xl py-3 px-5 flex items-center justify-between mb-2 shadow-sm">
                             <span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider" data-i18n="stock_text">Current stock status:</span>
                             <div class="flex items-center gap-2">
-                                <div class="stock-bar">
+                                <div class="stock-bar" aria-label="Low stock indicator">
                                     <div class="stock-block active"></div><div class="stock-block"></div><div class="stock-block"></div><div class="stock-block"></div>
                                 </div>
                                 <span class="text-[11px] font-black text-red-600 uppercase" data-i18n="stock_low">LOW</span>
@@ -232,7 +234,6 @@
                         </div>
                         <p class="text-[10px] text-slate-400 mb-10 italic lg:mb-8" data-i18n="hero_disclaimer">*Results based on individual conditions. See full disclaimer below.</p>
 
-                        <!-- SELOS DE SEGURANÇA -->
                         <div class="w-full max-w-[440px] flex flex-col items-center gap-4">
                             <div class="flex items-center gap-2 text-[9px] text-slate-500 font-bold uppercase tracking-tight" data-i18n="secure_checkout">
                                 <i class="fas fa-lock text-orange-400"></i>
@@ -270,7 +271,7 @@
                                     <li class="flex items-start gap-3 text-slate-700 font-medium"><i class="fas fa-check text-green-500 mt-1"></i><span data-i18n="opt1_li1">Full 60% discount applied</span></li>
                                     <li class="flex items-start gap-3 text-slate-700 font-medium"><i class="fas fa-bolt text-brand-accent mt-1"></i><span data-i18n="opt1_li2">Deep-tissue EMS recovery technology</span></li>
                                     <li class="flex items-start gap-3 text-slate-700 font-medium"><i class="fas fa-truck text-brand-accent mt-1"></i><span data-i18n="opt1_li3">Fast tracked shipping</span></li>
-                                    <li class="flex items-start gap-3 text-slate-700 font-medium"><i class="fas fa-shield-alt text-brand-accent mt-1"></i><span data-i18n="opt1_li4">90-Day Satisfaction Promise</span></li>
+                                    <li class="flex items-start gap-3 text-slate-700 font-medium"><i class="fas fa-shield-alt text-brand-accent mt-1"></i><span data-i18n="opt1_li4">30-Day Money-Back Guarantee</span></li>
                                 </ul>
                                 <div class="mt-auto text-center">
                                     <p class="text-[11px] text-red-600 font-bold mb-4 uppercase tracking-tight" data-i18n="limited_stock">🚨 Very limited stock available</p>
@@ -279,7 +280,7 @@
                             </div>
                         </div>
 
-                        <!-- OPTION 2 — HOW IT WORKS (BORDA SUTIL) -->
+                        <!-- OPTION 2 — HOW IT WORKS -->
                         <div class="bg-white rounded-[2.5rem] shadow-lg border border-slate-200 flex flex-col h-full hover:shadow-2xl transition-all hover:-translate-y-1">
                             <div class="p-10 flex-1 flex flex-col">
                                 <h3 class="text-2xl font-black text-brand-deep mb-1 uppercase tracking-tight leading-tight" data-i18n="opt2_title">HOW IT WORKS</h3>
@@ -298,7 +299,7 @@
                             </div>
                         </div>
 
-                        <!-- OPTION 3 — FEEDBACK (BORDA SUTIL) -->
+                        <!-- OPTION 3 — FEEDBACK -->
                         <div class="bg-white rounded-[2.5rem] shadow-lg border border-slate-200 flex flex-col h-full hover:shadow-2xl transition-all hover:-translate-y-1">
                             <div class="p-10 flex-1 flex flex-col text-left">
                                 <h3 class="text-2xl font-black text-brand-deep mb-1 uppercase tracking-tight leading-tight text-left" data-i18n="opt3_title">CUSTOMER FEEDBACK</h3>
@@ -321,10 +322,10 @@
             </section>
         </main>
 
-        <!-- FOOTER (GOOGLE ADS COMPLIANCE) -->
+        <!-- FOOTER -->
         <footer class="bg-brand-footer pt-20 pb-12 px-6 mt-auto text-white">
             <div class="max-w-7xl mx-auto flex flex-col items-center text-center">
-                <img src="images/EMSense logo white.svg" alt="EMSense official logo" class="h-8 md:h-12 w-auto mb-12">
+                <img src="images/EMSense logo white.svg" alt="EMSense authorized logo" class="h-8 md:h-12 w-auto mb-12">
                 
                 <nav class="flex flex-wrap justify-center gap-x-10 gap-y-6 mb-16 text-[11px] uppercase font-black tracking-widest text-white/60">
                     <button onclick="openModal('privacy')" class="hover:text-white transition-all">Privacy Policy</button>
@@ -376,6 +377,7 @@
                 'feat_3': 'Recarregável via USB',
                 'feat_4': 'Alívio de Bolso',
                 'btn_cta': 'GARANTIR 60% DE DESCONTO HOJE!',
+                'guarantee_badge': 'Garantia de Reembolso de 30 Dias Incluída',
                 'stock_text': 'Status do estoque em tempo real:',
                 'stock_low': 'BAIXO',
                 'hero_disclaimer': '*Resultados baseados em condições individuais. Consulte o aviso legal no rodapé.',
@@ -389,7 +391,7 @@
                 'opt1_li1': 'Desconto total de 60% aplicado',
                 'opt1_li2': 'Tecnologia EMS de recuperação profunda',
                 'opt1_li3': 'Envio rápido rastreado',
-                'opt1_li4': 'Promessa de Satisfação de 90 Dias',
+                'opt1_li4': 'Garantia de Reembolso de 30 Dias',
                 'limited_stock': '🚨 Estoque muito limitado disponível',
                 'opt1_btn': '👉 RECLAMAR DESCONTO E CHECKOUT',
                 'opt2_title': 'COMO FUNCIONA',
