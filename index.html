@@ -125,7 +125,7 @@
             .mobile-benefit-grid { grid-template-columns: 1fr !important; gap: 0.75rem !important; }
         }
 
-        /* Política de Cookies Discreta mas com Botão Visível */
+        /* Política de Cookies Discreta */
         #cookie-notice {
             position: fixed;
             bottom: 0;
@@ -243,7 +243,7 @@
                         <div class="w-full max-w-[440px] bg-white border border-slate-300 rounded-2xl py-3 px-5 flex items-center justify-between mb-2 shadow-sm">
                             <span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider" data-i18n="stock_text">Current stock status:</span>
                             <div class="flex items-center gap-2">
-                                <div class="stock-bar" aria-label="Low stock indicator">
+                                <div class="stock-bar">
                                     <div class="stock-block active"></div><div class="stock-block"></div><div class="stock-block"></div><div class="stock-block"></div>
                                 </div>
                                 <span class="text-[11px] font-black text-red-600 uppercase" data-i18n="stock_low">LOW</span>
@@ -277,7 +277,7 @@
                     </header>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                         
-                        <!-- OPTION 1 — STORE -->
+                        <!-- OPTION 1 — DIRECT CHECKOUT (DTC) -->
                         <div class="bg-slate-50 rounded-[2.5rem] shadow-xl border-2 border-brand-accent relative overflow-hidden flex flex-col h-full transform transition-all z-10 hover:-translate-y-2">
                             <div class="bg-brand-accent text-white text-center py-4 text-[11px] font-black uppercase tracking-widest" data-i18n="opt1_tag">✅ BEST PRICE (60% OFF DEAL)</div>
                             <div class="p-10 flex-1 flex flex-col">
@@ -297,7 +297,7 @@
                             </div>
                         </div>
 
-                        <!-- OPTION 2 — HOW IT WORKS -->
+                        <!-- OPTION 2 — HOW IT WORKS (TSL) -->
                         <div class="bg-white rounded-[2.5rem] shadow-lg border border-slate-200 flex flex-col h-full hover:shadow-2xl transition-all hover:-translate-y-1">
                             <div class="p-10 flex-1 flex flex-col">
                                 <h3 class="text-2xl font-black text-brand-deep mb-1 uppercase tracking-tight leading-tight" data-i18n="opt2_title">HOW IT WORKS</h3>
@@ -316,7 +316,7 @@
                             </div>
                         </div>
 
-                        <!-- OPTION 3 — FEEDBACK -->
+                        <!-- OPTION 3 — FEEDBACK (REVIEW) -->
                         <div class="bg-white rounded-[2.5rem] shadow-lg border border-slate-200 flex flex-col h-full hover:shadow-2xl transition-all hover:-translate-y-1">
                             <div class="p-10 flex-1 flex flex-col text-left">
                                 <h3 class="text-2xl font-black text-brand-deep mb-1 uppercase tracking-tight leading-tight text-left" data-i18n="opt3_title">CUSTOMER FEEDBACK</h3>
@@ -339,10 +339,10 @@
             </section>
         </main>
 
-        <!-- FOOTER -->
+        <!-- FOOTER (GOOGLE ADS COMPLIANCE) -->
         <footer class="bg-brand-footer pt-20 pb-12 px-6 mt-auto text-white">
             <div class="max-w-7xl mx-auto flex flex-col items-center text-center">
-                <img src="images/EMSense logo white.svg" alt="EMSense official logo" class="h-8 md:h-12 w-auto mb-12">
+                <img src="images/EMSense logo white.svg" alt="EMSense authorized logo" class="h-8 md:h-12 w-auto mb-12">
                 
                 <nav class="flex flex-wrap justify-center gap-x-10 gap-y-6 mb-16 text-[11px] uppercase font-black tracking-widest text-white/60">
                     <button onclick="openModal('privacy')" class="hover:text-white transition-all">Privacy Policy</button>
@@ -353,7 +353,7 @@
                 </nav>
 
                 <!-- LEGAL COMPLIANCE -->
-                <div class="text-[10px] text-white/30 leading-relaxed max-w-5xl space-y-6 border-t border-white/5 pt-12">
+                <div class="text-[10px] text-white/30 leading-relaxed max-w-5xl space-y-6 border-t border-white/10 pt-12">
                     <p>EMSense™ is owned and operated by <strong>FONSLIFE TRADING - FZCO</strong>. Registered Address: Dubai Silicon Oasis, DDP, Building A1, Dubai, UAE.</p>
                     <p class="italic" data-i18n="disclaimer_med"><strong>*Medical Disclaimer:</strong> The statements made on this website have not been evaluated by the Food and Drug Administration (FDA) or any other medical body. This product is not intended to diagnose, treat, cure, or prevent any disease. Results are based on clinical methods; experiences vary. Consult a professional before use if you have medical conditions.</p>
                     <p>This site is not a part of the Google website or Google Inc. Additionally, this site is NOT endorsed by Google in any way. Google is a trademark of Google, Inc.</p>
@@ -377,7 +377,7 @@
         </div>
     </div>
 
-    <!-- POLÍTICA DE COOKIES (DESTACADA) -->
+    <!-- POLÍTICA DE COOKIES -->
     <div id="cookie-notice">
         <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
             <p class="text-[10px] lg:text-xs text-slate-600 font-medium leading-tight" data-i18n="cookie_text">
